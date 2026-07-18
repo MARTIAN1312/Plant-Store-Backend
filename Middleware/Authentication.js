@@ -1,4 +1,4 @@
-import User from "../models/users.js"
+import User from "../models/user_model.js"
 import jwt from "jsonwebtoken"
 
 const authorization = async(req, res ,next)=>{
