@@ -1,3 +1,6 @@
+import bcrypt from 'bcrypt'
+import User from '../../models/user_model.js'
+import generateAuthToken from '../../Application/auth.js'
 
 const signup = async (req, res) => {
     try{

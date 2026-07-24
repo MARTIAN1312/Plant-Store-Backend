@@ -1,6 +1,11 @@
+import User from "../../models/user_model.js"
+import bcrypt from "bcrypt"
+import generateAuthToken from "../../Application/auth.js"
+
 const login = async (req, res) => {
     try{
         const {email, password} = req.body
+        console.log(req.body)
         const user = await User.findOne({email})
         console.log(user, 'user')
         const isMatch = await bcrypt.compare(password, user.password)
